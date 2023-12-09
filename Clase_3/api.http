@@ -1,0 +1,34 @@
+###RECUPERAR TODAS LAS PELICULAS
+GET http://localhost:1234/movies
+
+###Recyuroperar peli por id
+GET http://localhost:1234/movies/5ad1a235-0d9c-410a-b32b-220d91689a08
+###Recyuroperar peli por genero
+GET http://localhost:1234/movies?genre=Drama
+
+
+###Crear una pelicula
+
+POST  http://localhost:1234/movies
+Content-Type: application/json
+
+{
+    "title": "ppp Shawshank Redemption",
+    "year": 1984,
+    "director": "df Darabont",
+    "duration": 145,
+    "poster": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.primevideo.com%2F-%2Fes%2Fdetail%2FAvatar-The-Way-of-Water%2F0R6MAB6Q360AL86YRENF5C0IF3&psig=AOvVaw19sBbsXPlSxJ66OBm7YL0x&ust=1700942937915000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCIi9na-43YIDFQAAAAAdAAAAABAE",
+   "genre": [
+      "Horror"
+    ]
+}
+###Actualizar UNA PELICULA
+
+PATCH http://localhost:1234/movies/241bf55d-b649-4109-af7c-0e6890ded3fc
+Content-Type: application/json
+
+{
+  "title": "Hola",
+  "year": 2010
+}
+
